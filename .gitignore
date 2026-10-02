@@ -17,6 +17,9 @@ htmlcov/
 # IDE
 .vscode/
 
+#documentation
+docs/*
+
 # Data
 data/raw/*
 data/processed/*
