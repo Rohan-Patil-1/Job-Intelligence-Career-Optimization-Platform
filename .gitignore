@@ -17,8 +17,8 @@ htmlcov/
 # IDE
 .vscode/
 
-#documentation
-docs/*
+# Track project documentation
+!docs/
 
 # Data
 data/raw/*
@@ -27,3 +27,15 @@ data/processed/*
 # OS
 .DS_Store
 Thumbs.db
+
+# Local SQLite databases
+data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# Local database backups
+data/*.sqlite
+data/*.sqlite3
+
+# Keep documentation tracked
+!docs/.gitkeep
