@@ -80,7 +80,7 @@ class DuplicateDetector:
                 if title_1 and title_2
                 else 0.0
             )
-            
+
             seniority_1 = detect_seniority(first.title)
             seniority_2 = detect_seniority(second.title)
 

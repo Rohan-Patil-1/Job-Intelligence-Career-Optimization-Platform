@@ -111,7 +111,7 @@ def test_different_seniority_not_flagged_as_similar_duplicate():
 
     results = DuplicateDetector.analyze(jobs)
 
-    assert results == []    
+    assert results == []
 
 def test_senior_manager_and_manager_are_distinct():
     jobs = [
