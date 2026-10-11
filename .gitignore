@@ -17,8 +17,8 @@ htmlcov/
 # IDE
 .vscode/
 
-#documentation
-docs/*
+# Track project documentation
+!docs/
 
 # Data
 data/raw/*
