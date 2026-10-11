@@ -60,6 +60,21 @@ class AdzunaSource(JobSource):
         salary_min = job.get("salary_min")
         salary_max = job.get("salary_max")
 
+        contract_type = job.get("contract_type")
+        contract_time = job.get("contract_time")
+
+        employment_parts = [
+            value
+            for value in (contract_time, contract_type)
+            if value
+        ]
+
+        employment_type = (
+            " / ".join(employment_parts)
+            if employment_parts
+            else None
+        )
+
         return {
             "source": "adzuna",
             "source_job_id": str(job["id"]),
@@ -67,7 +82,7 @@ class AdzunaSource(JobSource):
             "company": job.get("company", {}).get("display_name"),
             "location": job.get("location", {}).get("display_name"),
             "remote_type": None,
-            "employment_type": None,
+            "employment_type": employment_type,
             "salary_min": salary_min,
             "salary_max": salary_max,
             "salary_currency": "USD",
